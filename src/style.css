@@ -68,9 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   margin: auto;
   background-color: #232328; }
-  @media (max-width: 1000px) {
-    .container {
-      width: 95vw; } }
 
 #who .content {
   position: absolute;
@@ -87,3 +84,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     list-style: none;
     font-size: 1.5rem; }
+  @media only screen and (max-width: 1000px) {
+    #who .content {
+      position: static;
+      margin-left: 40px; }
+    #who .content h1 {
+      font-size: 4.2rem; }
+    #who .content ul {
+      position: static; } }
