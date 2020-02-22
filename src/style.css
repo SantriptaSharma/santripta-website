@@ -1,0 +1,35 @@
+@font-face
+{
+    font-family: "SourceSansProLight";
+    src: url("./fonts/SourceSansPro-Light.ttf");
+}
+
+@font-face
+{
+    font-family: "SourceSansPro";
+    src: url("./fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face
+{
+    font-family: "Javatext";
+    src: url("./fonts/javatext.ttf");
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #242429;
+    color: #faf8f5;
+}
+
+.container
+{
+    width: 85vw;
+    margin: auto;
+
+    @media (max-width: 1000px) {
+        width: 95vw;
+    }
+}
