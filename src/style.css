@@ -18,6 +18,9 @@ body {
   overflow-x: hidden;
   font-family: "SourceSansProLight"; }
 
+* {
+  transition-duration: 0.4s; }
+
 a {
   text-decoration: none;
   color: #f7c8a8; }
@@ -71,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #who .content {
   position: absolute;
-  left: 340px;
+  left: 22vw;
   top: 90px; }
   #who .content h1 {
     font-size: 5rem;
@@ -81,14 +84,16 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     left: 180px;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     list-style: none;
     font-size: 1.5rem; }
   @media only screen and (max-width: 1000px) {
     #who .content {
-      position: static;
+      position: relative;
+      top: -50px;
+      left: 0px;
       margin-left: 40px; }
     #who .content h1 {
-      font-size: 4.2rem; }
+      font-size: 3.8rem; }
     #who .content ul {
       position: static; } }
