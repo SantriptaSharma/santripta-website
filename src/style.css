@@ -16,14 +16,17 @@ body {
   background-color: #232328;
   color: #FFF6F0;
   overflow-x: hidden;
-  font-family: "SourceSansProLight"; }
-
-* {
-  transition-duration: 0.4s; }
+  font-family: "SourceSansProLight";
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; }
 
 a {
   text-decoration: none;
-  color: #f7c8a8; }
+  color: #f7c8a8;
+  cursor: pointer;
+  transition-duration: 0.3s; }
+  a:hover {
+    color: #fdbe94; }
   a:active {
     color: #fca063; }
 
@@ -32,12 +35,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "SourceSansPro"; }
 
 #header {
-  padding: 0 30px;
-  margin: 16px 130px;
+  width: 85vw;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  padding: 0 7.5vw;
   background-color: #232328;
   -webkit-user-select: none;
   user-select: none; }
@@ -63,37 +71,69 @@ h1, h2, h3, h4, h5, h6 {
     #header ul {
       display: none; }
     #header {
-      justify-content: center; } }
+      justify-content: center;
+      position: relative; } }
 
 .container {
+  scroll-snap-align: start;
+  display: block;
   position: relative;
-  width: 85vw;
-  height: 100%;
-  margin: auto;
-  background-color: #232328; }
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0; }
+  @media only screen and (max-width: 1000px) {
+    .container {
+      height: auto;
+      margin-top: 30px; } }
 
-#who .content {
-  position: absolute;
-  left: 22vw;
-  top: 90px; }
-  #who .content h1 {
+.content {
+  position: relative;
+  transition-property: position,top,left,margin-left;
+  transition-duration: 0.2s; }
+  .content h1 {
     font-size: 5rem;
     margin: 0;
     padding: 0; }
-  #who .content ul {
+  .content ul {
     position: relative;
-    left: 180px;
+    font-size: 1.5rem;
     margin: 0;
     padding: 10px;
-    list-style: none;
-    font-size: 1.5rem; }
+    list-style: none; }
+  @media only screen and (max-width: 1000px) {
+    .content {
+      margin-left: 40px; }
+    .content h1 {
+      font-size: 3.8rem; }
+    .content ul {
+      position: static; } }
+
+#who .content {
+  left: 30vw;
+  top: 200px; }
+  #who .content ul {
+    left: 120px; }
   @media only screen and (max-width: 1000px) {
     #who .content {
-      position: relative;
-      top: -50px;
       left: 0px;
-      margin-left: 40px; }
-    #who .content h1 {
-      font-size: 3.8rem; }
-    #who .content ul {
-      position: static; } }
+      top: 0px; } }
+
+#what .content {
+  top: 150px;
+  left: 20vw; }
+  #what .content ul {
+    left: 30px; }
+  @media only screen and (max-width: 1000px) {
+    #what .content {
+      left: 0px;
+      top: 0px; } }
+
+#where .content {
+  top: 150px;
+  left: 24vw; }
+  #where .content ul {
+    left: 75px; }
+  @media only screen and (max-width: 1000px) {
+    #where .content {
+      left: 0px;
+      top: 0px; } }

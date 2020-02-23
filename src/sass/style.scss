@@ -2,6 +2,7 @@ $primary-color: #232328;
 $secondary-color: #FFF6F0;
 $link-color:  #f7c8a8;
 $alink-color: #fca063;
+$hlink-color: #fdbe94;
 
 @font-face 
 {
@@ -35,17 +36,22 @@ body
     color: $secondary-color;
     overflow-x: hidden;
     font-family: "SourceSansProLight";
-}
-
-*
-{
-    transition-duration: 0.4s;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 a
 {
     text-decoration: none;
     color: $link-color;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+
+    &:hover
+    {
+        color: $hlink-color;
+    }
 
     &:active
     {
@@ -61,12 +67,17 @@ h1,h2,h3,h4,h5,h6
 
 #header
 {
-    padding: 0 30px;
-    margin: 16px 130px;
+    width: 85vw;
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 10;
+    padding: 0 7.5vw;
     background-color: $primary-color;
 
     @include unselectable();
@@ -108,62 +119,135 @@ h1,h2,h3,h4,h5,h6
         &
         {
             justify-content: center;
+            position: relative;
         }
     }
 }
 
 .container
-{ 
+{
+    scroll-snap-align: start;
+    display: block;
     position: relative;
-    width: 85vw;
-    height: 100%; 
-    margin: auto;
-    background-color: $primary-color;
+    width: 100vw;
+    height: 100vh; 
+    margin-top:0;
+
+    @media only screen and (max-width: 1000px)
+    {
+        &
+        {
+            height: auto;
+            margin-top: 30px;
+        }
+    }
+}
+
+.content
+{
+    position: relative;
+    transition-property: position,top,left,margin-left;
+    transition-duration: 0.2s;
+
+    h1
+    {
+        font-size: 5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul
+    {
+        position: relative;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+    }
+
+    @media only screen and (max-width: 1000px)
+    {
+        &
+        {
+            margin-left: 40px;
+        }
+
+        h1
+        {
+            font-size: 3.8rem;
+        }
+
+        ul
+        {
+            position: static;
+        }
+    }
 }
 
 #who
 {
     .content
     {
-        position: absolute;
-        left: 22vw;
-        top: 90px;
-
-        h1
-        {
-            font-size: 5rem;
-            margin: 0;
-            padding: 0;
-        }
+        left: 30vw;
+        top: 200px;
 
         ul
         {
-            position: relative;
-            left: 180px;
-            margin: 0;
-            padding: 10px;
-            list-style: none;
-            font-size: 1.5rem;
+            left: 120px;
         }
 
         @media only screen and (max-width:1000px)
         {
             &
             {
-                position: relative;
-                top: -50px;
                 left:0px;
-                margin-left: 40px;
+                top: 0px;
             }
-            
-            h1
+        }
+    }
+}
+
+#what
+{
+    .content
+    {
+        top: 150px;
+        left: 20vw;
+
+        ul
+        {
+            left: 30px;
+        }
+
+        @media only screen and (max-width: 1000px)
+        {
+            &
             {
-                font-size: 3.8rem;
+                left: 0px;
+                top: 0px;
             }
-            
-            ul
+        }
+    }
+}
+
+#where
+{
+    .content
+    {
+        top: 150px;
+        left: 24vw;
+
+        ul
+        {
+            left: 75px;
+        }
+
+        @media only screen and (max-width: 1000px)
+        {
+            &
             {
-                position: static;
+                left: 0px;
+                top: 0px;
             }
         }
     }
