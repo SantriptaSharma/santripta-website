@@ -2,7 +2,7 @@
 My personal website created using plain html+sass+js
 
 ## Prerequisites
-npm install
+npm install && npm install gulp
 
 ## Development
 gulp
