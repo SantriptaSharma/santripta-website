@@ -17,8 +17,7 @@ body {
   color: #FFF6F0;
   overflow-x: hidden;
   font-family: "SourceSansProLight";
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory; }
+  overflow-y: scroll; }
 
 a {
   text-decoration: none;
