@@ -1,0 +1,28 @@
+{
+  "name": "santripta-website",
+  "version": "1.0.0",
+  "description": "My personal website created using plain html+sass+js     \r [the site](https://santrip.ga)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantriptaSharma/santripta-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantriptaSharma/santripta-website/issues"
+  },
+  "homepage": "https://github.com/SantriptaSharma/santripta-website#readme"
+}
