@@ -117,8 +117,8 @@ h1,h2,h3,h4,h5,h6
 
         &
         {
-            justify-content: center;
             position: relative;
+            display: none;
         }
     }
 }
@@ -158,27 +158,33 @@ h1,h2,h3,h4,h5,h6
     ul
     {
         position: relative;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin: 0;
         padding: 10px;
         list-style: none;
+    }
+
+    li
+    {
+        padding: 3px;
     }
 
     @media only screen and (max-width: 1000px)
     {
         &
         {
-            margin-left: 40px;
+            margin-left: 5px;
         }
 
         h1
         {
-            font-size: 3.8rem;
+            font-size: 3rem;
         }
 
         ul
         {
             position: static;
+            font-size: 1.2rem;
         }
     }
 }
@@ -201,6 +207,11 @@ h1,h2,h3,h4,h5,h6
             {
                 left:0px;
                 top: 0px;
+            }
+
+            h1
+            {
+                font-size: 3.5rem;
             }
         }
     }

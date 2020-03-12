@@ -70,8 +70,8 @@ h1, h2, h3, h4, h5, h6 {
     #header ul {
       display: none; }
     #header {
-      justify-content: center;
-      position: relative; } }
+      position: relative;
+      display: none; } }
 
 .container {
   scroll-snap-align: start;
@@ -95,17 +95,20 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0; }
   .content ul {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 0;
     padding: 10px;
     list-style: none; }
+  .content li {
+    padding: 3px; }
   @media only screen and (max-width: 1000px) {
     .content {
-      margin-left: 40px; }
+      margin-left: 5px; }
     .content h1 {
-      font-size: 3.8rem; }
+      font-size: 3rem; }
     .content ul {
-      position: static; } }
+      position: static;
+      font-size: 1.2rem; } }
 
 #who .content {
   left: 30vw;
@@ -115,7 +118,9 @@ h1, h2, h3, h4, h5, h6 {
   @media only screen and (max-width: 1000px) {
     #who .content {
       left: 0px;
-      top: 0px; } }
+      top: 0px; }
+    #who .content h1 {
+      font-size: 3.5rem; } }
 
 #what .content {
   top: 150px;
