@@ -16,5 +16,3 @@ $(document).ready(function(){
         }
     });
 });
-
-console.log(process.env);
