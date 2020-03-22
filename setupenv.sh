@@ -1,0 +1,1 @@
+echo $BRUH > dist/bruh.txt
